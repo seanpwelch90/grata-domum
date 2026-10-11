@@ -1,0 +1,48 @@
+{
+  "clock": "2026-12-24T15:00:00Z",
+  "fictional": true,
+  "cases": [
+    {
+      "file": "default.json",
+      "theme": "default",
+      "visit": "fixture-visit",
+      "guestCount": 2
+    },
+    {
+      "file": "christmas.json",
+      "theme": "christmas",
+      "visit": "fixture-visit",
+      "guestCount": 2
+    },
+    {
+      "file": "no-visit.json",
+      "theme": "default",
+      "visit": null,
+      "guestCount": 0
+    },
+    {
+      "file": "missing-optional.json",
+      "theme": "default",
+      "visit": "fixture-visit",
+      "guestCount": 2
+    },
+    {
+      "file": "long-names-many-guests.json",
+      "theme": "default",
+      "visit": "fixture-visit",
+      "guestCount": 8
+    },
+    {
+      "file": "unavailable-actions.json",
+      "theme": "default",
+      "visit": "fixture-visit",
+      "guestCount": 2
+    },
+    {
+      "file": "stale-weather.json",
+      "theme": "default",
+      "visit": "fixture-visit",
+      "guestCount": 2
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "apiVersion": 1,
+  "syncedAt": "2026-12-24T15:00:00Z",
+  "timeZone": "America/New_York",
+  "household": {
+    "id": "fixture-house",
+    "name": "Maple House"
+  },
+  "device": {
+    "id": "fixture-ipad",
+    "name": "Guest iPad",
+    "surface": "ipad",
+    "roomId": "fixture-room",
+    "roomName": "Garden room",
+    "canPostNotes": true
+  },
+  "visit": {
+    "id": "fixture-visit",
+    "title": "Winter together",
+    "message": "We are so happy you are here. Make yourself at home!",
+    "startsOn": "2026-12-23",
+    "endsOn": "2026-12-28",
+    "guests": [
+      {
+        "id": "fixture-person-a",
+        "displayName": "Avery",
+        "initials": "A",
+        "avatarURL": ""
+      },
+      {
+        "id": "fixture-person-b",
+        "displayName": "Jordan",
+        "initials": "J",
+        "avatarURL": ""
+      }
+    ],
+    "coverURL": ""
+  },
+  "theme": {
+    "id": "default",
+    "name": "Welcome Home",
+    "background": "#F7F3EA",
+    "backgroundSecondary": "#E5EBDD",
+    "text": "#233D35",
+    "textSecondary": "#57665C",
+    "accent": "#2E6553",
+    "accentText": "#FFFFFF",
+    "surface": "#FFFDF8",
+    "surfaceText": "#233D35",
+    "surfaceMuted": "#57665C",
+    "motion": "none",
+    "greetingStyle": "plain"
+  },
+  "wifi": null,
+  "location": null,
+  "weather": null,
+  "actions": [],
+  "events": [],
+  "map": {
+    "imageURL": "",
+    "pins": []
+  },
+  "guide": [],
+  "notes": [],
+  "showNotesOnTV": false
+}

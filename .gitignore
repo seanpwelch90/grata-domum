@@ -1,0 +1,19 @@
+.DS_Store
+node_modules
+.next
+data
+*.db
+*.db-wal
+*.db-shm
+out
+.gocache
+DerivedData
+xcuserdata
+.build
+
+# Local configuration and generated diagnostics
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+*.log

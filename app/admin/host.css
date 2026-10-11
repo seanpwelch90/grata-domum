@@ -1,0 +1,738 @@
+.host {
+  --host-bg: #f7f3ea;
+  --host-surface: #fffdf8;
+  --host-ink: #233d35;
+  --host-muted: #57665c;
+  --host-line: #dddcd2;
+  --host-accent: #2e6553;
+  background: var(--host-bg);
+  color: var(--host-ink);
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 208px minmax(0, 1fr);
+  font-family: "DMSans", system-ui, sans-serif;
+}
+.host * {
+  box-sizing: border-box;
+}
+.host h1:where(:not(.guest-welcome *)),
+.host h2:where(:not(.guest-welcome *)),
+.host h3:where(:not(.guest-welcome *)) {
+  font-family: "DMSans", system-ui, sans-serif;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+.host h1:where(:not(.guest-welcome *)) {
+  font-size: 2rem;
+  margin: 0 0 0.6rem;
+  font-weight: 650;
+}
+.host h2:where(:not(.guest-welcome *)) {
+  font-size: 1.3rem;
+  margin: 0 0 0.7rem;
+  font-weight: 650;
+}
+.host h3:where(:not(.guest-welcome *)) {
+  font-size: 1.1rem;
+}
+.host p:where(:not(.guest-welcome *)) {
+  margin: 0 0 1rem;
+}
+.host a:where(:not(.guest-welcome *)) {
+  color: var(--host-accent);
+}
+.host small:where(:not(.guest-welcome *)) {
+  font-size: 0.85rem;
+}
+.host button:where(:not(.guest-welcome *)),
+.host .host-button {
+  border-radius: 9px;
+  min-height: 44px;
+  padding: 0.65rem 1rem;
+  font-weight: 550;
+  background: var(--host-surface);
+  color: var(--host-ink);
+  border: 1px solid var(--host-line);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+.host .primary,
+.host button:where(:not(.guest-welcome *))[type="submit"] {
+  background: var(--host-accent);
+  color: #fff;
+  border-color: var(--host-accent);
+}
+.host button:where(:not(.guest-welcome *)):disabled {
+  background: var(--host-bg);
+  color: var(--host-muted);
+  border-color: var(--host-line);
+  cursor: not-allowed;
+}
+.host button:where(:not(.guest-welcome *)).quiet {
+  background: transparent;
+}
+.host :focus-visible {
+  outline: 3px solid var(--host-accent);
+  outline-offset: 3px;
+}
+.host input:where(:not(.guest-welcome *)),
+.host textarea:where(:not(.guest-welcome *)),
+.host select:where(:not(.guest-welcome *)) {
+  min-height: 44px;
+  border: 1px solid #778579;
+  border-radius: 10px;
+  padding: 0.7rem;
+  background: #fffdf8;
+  color: var(--host-ink);
+  font-size: 1rem;
+}
+.host input:where(:not(.guest-welcome *))[type="checkbox"] {
+  min-height: 20px;
+  width: 20px;
+  height: 20px;
+  accent-color: var(--host-accent);
+}
+.host label:where(:not(.guest-welcome *)) {
+  font-size: 0.9rem;
+  font-weight: 550;
+  display: grid;
+  gap: 7px;
+}
+.host label:where(:not(.guest-welcome *)):has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+}
+.host form:where(:not(.guest-welcome *)) {
+  max-width: none;
+  gap: 1rem;
+}
+.host fieldset:where(:not(.guest-welcome *)) {
+  border-color: var(--host-line);
+}
+.host textarea:where(:not(.guest-welcome *)) {
+  min-height: 115px;
+}
+.host-rail {
+  background: #233d35;
+  color: #fffdf8;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+}
+.host .host-brand {
+  color: #fffdf8;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 650;
+  line-height: 1.25;
+  padding: 0 10px;
+}
+.host-brand small {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-top: 9px;
+  color: #dddcd2;
+}
+.host-rail nav {
+  display: grid;
+  gap: 6px;
+}
+.host-rail nav a {
+  padding: 12px 16px;
+  border-radius: 9px;
+  color: #f7f3ea;
+  text-decoration: none;
+}
+.host-rail nav a[aria-current="page"] {
+  background: #f4dea2;
+  color: #233d35;
+  font-weight: 650;
+}
+.host-account {
+  margin-top: auto;
+  display: grid;
+  gap: 14px;
+  border-top: 1px solid #456353;
+  padding: 20px 10px;
+}
+.host .host-account button {
+  background: transparent;
+  color: #f4dea2;
+  border-color: #456353;
+}
+.host-main {
+  padding: 32px 24px;
+  min-width: 0;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+.host-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--host-muted);
+  font-size: 0.875rem;
+  margin-bottom: 24px;
+}
+.host-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.host-heading > div {
+  max-width: 740px;
+}
+.host-muted {
+  color: var(--host-muted);
+  font-size: 0.95rem;
+}
+.host-eyebrow {
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: var(--host-muted);
+  margin-bottom: 12px !important;
+}
+.host-panel,
+.host .card {
+  background: var(--host-surface);
+  border: 1px solid var(--host-line);
+  border-radius: 16px;
+  box-shadow:
+    0 2px 3px rgb(35 61 53 / 2.5%),
+    0 8px 24px rgb(35 61 53 / 4.5%);
+  padding: 24px;
+  margin-bottom: 22px;
+}
+.host-live {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 32px;
+}
+.host-welcome-tile {
+  min-height: 220px;
+  background: #f4dea2;
+  color: #233d35;
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.host-welcome-tile:after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  bottom: -60px;
+  width: 170px;
+  height: 170px;
+  background: #b5c7aa;
+  border-radius: 90px 90px 0 0;
+  border: 8px solid #778579;
+}
+.host-welcome-tile.christmas {
+  background: #e5ebdd;
+  color: #233d35;
+}
+.host-welcome-tile.christmas:after {
+  background: #b7cbb2;
+  opacity: 0.25;
+}
+.host-welcome-tile span {
+  font-size: 0.875rem;
+}
+.host-welcome-tile strong {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 400;
+  font-size: 2.1rem;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  position: relative;
+  z-index: 1;
+}
+.host-welcome-tile p {
+  position: relative;
+  z-index: 1;
+  max-width: 32ch;
+  overflow-wrap: anywhere;
+}
+.host-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.host-badge {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px 9px;
+  background: #e5ebdd;
+  color: #233d35;
+  font-size: 0.75rem;
+}
+.host-warning {
+  padding: 12px;
+  background: #faebc9;
+  color: #705321;
+  border-radius: 8px;
+  margin-top: 12px !important;
+}
+.host-list-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--host-line);
+}
+.host-list-row:last-child {
+  border-bottom: 0;
+}
+.host-list-row > a:last-child {
+  margin-left: auto;
+}
+.host-grow {
+  flex: 1;
+  min-width: 180px;
+}
+.host-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.host-avatars {
+  display: flex;
+  gap: 6px;
+  margin: 16px 0;
+}
+.host-avatar {
+  width: 42px;
+  height: 42px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f4dea2;
+  color: #234734;
+  font-size: 0.75rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.host-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.host-search {
+  max-width: 460px;
+  margin-bottom: 20px;
+}
+.host-subnav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.host-subnav a {
+  padding: 9px 12px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.host-subnav a[aria-current="page"] {
+  background: #e5ebdd;
+}
+.host-editor {
+  display: grid;
+  grid-template-columns: minmax(440px, 1fr) minmax(320px, 0.75fr);
+  gap: 24px;
+  align-items: start;
+}
+.host-editor-side {
+  position: static;
+  min-width: 0;
+}
+.host-preview {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--host-line);
+  background: #fffdf8;
+}
+.host-preview-caption {
+  padding: 12px;
+  font-size: 0.8rem;
+  color: var(--host-muted);
+}
+.host-tabs {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--host-line);
+  padding-bottom: 14px;
+  margin-bottom: 24px;
+}
+.host-tabs button {
+  background: transparent;
+  border-color: transparent;
+}
+.host-tabs button[aria-pressed="true"] {
+  background: #e5ebdd;
+  color: #233d35;
+}
+.host-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.host-theme-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.host-theme-grid button {
+  display: grid;
+  text-align: left;
+  justify-content: stretch;
+  padding: 10px;
+}
+.host-theme-grid button[aria-pressed="true"] {
+  border: 2px solid var(--host-accent);
+  padding: 9px;
+}
+.host-theme-swatch {
+  height: 48px;
+  border-radius: 6px;
+  display: block;
+}
+.host-savebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--host-line);
+  padding-top: 18px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.host-alert {
+  padding: 15px 18px;
+  background: #fbeae4;
+  color: #963f36;
+  border-radius: 9px;
+  margin-bottom: 18px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.host-notice {
+  padding: 12px 16px;
+  background: #e5ebdd;
+  color: #233d35;
+  border-radius: 9px;
+}
+.host-cover {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.host-upload {
+  padding: 14px;
+  background: #f7f3ea;
+  border-radius: 9px;
+  margin: 15px 0;
+}
+.host-library {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.7fr) minmax(0, 1.3fr);
+  gap: 22px;
+}
+.host-place-button {
+  width: 100%;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  display: grid !important;
+  margin-bottom: 8px;
+}
+.host-place-button[aria-pressed="true"] {
+  background: #e5ebdd;
+}
+.host-map {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden;
+}
+.host-map img {
+  width: 100%;
+  display: block;
+}
+.host-map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: #2e6553;
+  color: #fffdf8;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  font-size: 11px;
+}
+.host-pre {
+  overflow-wrap: anywhere;
+}
+.host-danger {
+  color: #963f36 !important;
+}
+.host .stack-form {
+  max-width: 760px;
+}
+.host .row {
+  gap: 12px;
+}
+.host .stack {
+  gap: 18px;
+}
+.host .pairing-code {
+  font-size: 2rem;
+  letter-spacing: 0.22em;
+}
+@media (max-width: 1199px) {
+  .host-editor {
+    grid-template-columns: 1fr;
+  }
+  .host-editor-side {
+    position: static;
+  }
+  .host-live {
+    gap: 20px;
+  }
+  .host-library {
+    grid-template-columns: 1fr 1.3fr;
+  }
+}
+@media (max-width: 899px) {
+  .host {
+    grid-template-columns: 1fr;
+  }
+  .host-rail {
+    position: static;
+    height: auto;
+    padding: 18px;
+    gap: 16px;
+  }
+  .host-rail nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .host-rail nav a {
+    padding: 10px 12px;
+  }
+  .host-account {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+  .host-brand small {
+    display: none;
+  }
+  .host-main {
+    padding: 22px 16px;
+  }
+  .host-columns,
+  .host-live,
+  .host-library,
+  .host-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .host-panel {
+    padding: 20px;
+  }
+  .host-top {
+    margin-bottom: 24px;
+  }
+  .host .host-heading {
+    align-items: flex-start;
+  }
+  .host-editor {
+    gap: 8px;
+  }
+}
+
+.host-editor-fields {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.host .host-today-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.host-rail nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+}
+.host-icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+.host-brand-mark {
+  display: block;
+  margin-bottom: 16px;
+  width: 32px;
+  height: 40px;
+}
+.host-save-feedback {
+  margin-top: 16px;
+}
+.host-save-feedback .host-notice,
+.host-save-feedback .host-alert {
+  margin-bottom: 0;
+}
+.host-statuses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.host-badge.unsaved {
+  background: #faebc9;
+  color: #705321;
+}
+.host-field-error {
+  color: #963f36;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+.host [aria-invalid="true"] {
+  border-color: #963f36;
+}
+.host input:where(:not(.guest-welcome *)),
+.host textarea:where(:not(.guest-welcome *)),
+.host select:where(:not(.guest-welcome *)),
+.host-panel,
+.host-editor > *,
+.host-columns > * {
+  min-width: 0;
+}
+.host p:where(:not(.guest-welcome *)),
+.host h1:where(:not(.guest-welcome *)),
+.host h2:where(:not(.guest-welcome *)),
+.host h3:where(:not(.guest-welcome *)),
+.host-brand {
+  overflow-wrap: anywhere;
+}
+.host .host-auth {
+  grid-column: 1 / -1;
+  width: min(100%, 560px);
+  justify-self: center;
+  align-self: center;
+  padding: 48px 24px;
+}
+.host .host-auth h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 400;
+}
+.host-auth form {
+  padding: 24px;
+  background: var(--host-surface);
+  border: 1px solid var(--host-line);
+  border-radius: 16px;
+}
+.host-empty {
+  padding: 24px 0;
+}
+.host-rail :focus-visible {
+  outline-color: #f4dea2;
+}
+@media (max-width: 480px) {
+  .host-theme-grid {
+    grid-template-columns: 1fr;
+  }
+  .host-savebar {
+    align-items: stretch;
+  }
+  .host-savebar button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .host-rail {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 12px;
+    padding: 12px;
+    align-items: center;
+  }
+  .host .host-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    font-size: 1rem;
+    min-width: 0;
+  }
+  .host-brand-mark {
+    width: 24px;
+    height: 30px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  .host-rail nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    gap: 4px;
+  }
+  .host-rail nav a {
+    gap: 8px;
+    padding: 10px;
+    font-size: 0.875rem;
+  }
+  .host-account {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .host-account > span,
+  .host-top > span:last-child {
+    display: none;
+  }
+  .host .host-account button {
+    padding: 8px 10px;
+    font-size: 0.875rem;
+  }
+  .host-top {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<!-- Optional Linux host-side advertisement. Adjust port/scheme to the public
+     listener. Do not also run the launcher advertiser for this deployment. -->
+<service-group>
+  <name replace-wildcards="yes">Grata Domum on %h</name>
+  <service>
+    <type>_grata-domum._tcp</type>
+    <port>8787</port>
+    <txt-record>api=1</txt-record>
+    <txt-record>scheme=http</txt-record>
+    <txt-record>path=/</txt-record>
+  </service>
+</service-group>

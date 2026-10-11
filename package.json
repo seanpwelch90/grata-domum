@@ -1,0 +1,42 @@
+{
+  "name": "grata-domum",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_OPTIONS='--experimental-sqlite' next dev -p 8787 --hostname 0.0.0.0",
+    "build": "NODE_OPTIONS='--experimental-sqlite' next build",
+    "start": "NODE_OPTIONS='--experimental-sqlite' next start -p 8787 --hostname 0.0.0.0",
+    "test": "NODE_OPTIONS='--experimental-sqlite' vitest run",
+    "typecheck": "next typegen && tsc --noEmit --incremental false",
+    "lint": "eslint .",
+    "format:check": "prettier --check app components lib tests contracts *.ts *.mjs *.json",
+    "format": "prettier --write app components lib tests contracts *.ts *.mjs *.json",
+    "swift:lint": "swift format lint --strict --recursive clients/GrataDomumKit/Sources clients/GrataDomumKit/Tests clients/iPad clients/AppleTV"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "@js-temporal/polyfill": "^0.5.1",
+    "next": "^16.3.6",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^26.6.3",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "prettier": "^3.9.9",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.70.1",
+    "vitest": "^5.0.2"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-darwin-arm64": "^1.2.11"
+  }
+}

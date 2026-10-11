@@ -1,0 +1,165 @@
+{
+  "apiVersion": 1,
+  "syncedAt": "2026-12-24T15:00:00Z",
+  "timeZone": "America/New_York",
+  "household": {
+    "id": "fixture-house",
+    "name": "Maple House"
+  },
+  "device": {
+    "id": "fixture-ipad",
+    "name": "Guest iPad",
+    "surface": "ipad",
+    "roomId": "fixture-room",
+    "roomName": "Garden room",
+    "canPostNotes": true
+  },
+  "visit": {
+    "id": "fixture-visit",
+    "title": "Winter together",
+    "message": "Welcome to our home! Welcome to our home! Welcome to our home! Welcome to our home! Welcome to our home! Welcome to our home! Welcome to our home! Welcome to our home! Welcome to our home! Welcome to our home! Welcome to our home! Welcome to our home! Welcome to our home! Welcome",
+    "startsOn": "2026-12-23",
+    "endsOn": "2026-12-28",
+    "guests": [
+      {
+        "id": "fixture-person-0",
+        "displayName": "Alexandria Montgomery",
+        "initials": "A",
+        "avatarURL": ""
+      },
+      {
+        "id": "fixture-person-1",
+        "displayName": "Christopher-Robin Fairweather",
+        "initials": "C",
+        "avatarURL": ""
+      },
+      {
+        "id": "fixture-person-2",
+        "displayName": "Sam",
+        "initials": "S",
+        "avatarURL": ""
+      },
+      {
+        "id": "fixture-person-3",
+        "displayName": "Taylor",
+        "initials": "T",
+        "avatarURL": ""
+      },
+      {
+        "id": "fixture-person-4",
+        "displayName": "Jordan",
+        "initials": "J",
+        "avatarURL": ""
+      },
+      {
+        "id": "fixture-person-5",
+        "displayName": "Morgan",
+        "initials": "M",
+        "avatarURL": ""
+      },
+      {
+        "id": "fixture-person-6",
+        "displayName": "Casey",
+        "initials": "C",
+        "avatarURL": ""
+      },
+      {
+        "id": "fixture-person-7",
+        "displayName": "Quinn",
+        "initials": "Q",
+        "avatarURL": ""
+      }
+    ],
+    "coverURL": ""
+  },
+  "theme": {
+    "id": "default",
+    "name": "Welcome Home",
+    "background": "#F7F3EA",
+    "backgroundSecondary": "#E5EBDD",
+    "text": "#233D35",
+    "textSecondary": "#57665C",
+    "accent": "#2E6553",
+    "accentText": "#FFFFFF",
+    "surface": "#FFFDF8",
+    "surfaceText": "#233D35",
+    "surfaceMuted": "#57665C",
+    "motion": "none",
+    "greetingStyle": "plain"
+  },
+  "wifi": null,
+  "location": null,
+  "weather": {
+    "stale": false,
+    "fetchedAt": "2026-12-24T15:00:00Z",
+    "unit": "fahrenheit",
+    "current": {
+      "temperature": 48,
+      "code": 1,
+      "label": "Mostly clear"
+    },
+    "daily": [
+      {
+        "date": "2026-12-24",
+        "code": 1,
+        "label": "Mostly clear",
+        "high": 52,
+        "low": 36
+      }
+    ]
+  },
+  "actions": [
+    {
+      "id": "fixture-lamp",
+      "label": "Bedside lamp",
+      "kind": "toggle",
+      "availability": "ok",
+      "power": "off",
+      "brightness": null,
+      "message": ""
+    }
+  ],
+  "events": [
+    {
+      "id": "fixture-breakfast",
+      "title": "Pancakes together",
+      "allDay": false,
+      "eventDate": "2026-12-24",
+      "startsAt": "2026-12-24T15:30:00Z",
+      "endsAt": "2026-12-24T16:30:00Z",
+      "location": "Kitchen",
+      "notes": "Come whenever you are ready.",
+      "link": ""
+    }
+  ],
+  "map": {
+    "imageURL": "",
+    "pins": [
+      {
+        "id": "fixture-towels",
+        "title": "Extra towels",
+        "description": "Upper shelf",
+        "category": "Supplies",
+        "roomId": "",
+        "roomName": "",
+        "x": 0.25,
+        "y": 0.75,
+        "photoURL": ""
+      }
+    ]
+  },
+  "guide": [
+    {
+      "id": "fixture-guide",
+      "title": "Extra towels",
+      "synonyms": ["bath towels"],
+      "category": "Supplies",
+      "location": "Hall closet",
+      "details": "Help yourself to fresh towels.",
+      "pinId": "fixture-towels",
+      "photoURL": ""
+    }
+  ],
+  "notes": [],
+  "showNotesOnTV": false
+}

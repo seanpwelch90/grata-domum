@@ -1,0 +1,30 @@
+[
+  {
+    "security": "WPA",
+    "ssid": "House",
+    "password": "secret",
+    "hidden": false,
+    "payload": "WIFI:T:WPA;S:House;P:secret;;"
+  },
+  {
+    "security": "WPA",
+    "ssid": "A;B",
+    "password": "p:q\\",
+    "hidden": false,
+    "payload": "WIFI:T:WPA;S:A\\;B;P:p\\:q\\\\;;"
+  },
+  {
+    "security": "nopass",
+    "ssid": "Cafe",
+    "password": "",
+    "hidden": false,
+    "payload": "WIFI:T:nopass;S:Cafe;;"
+  },
+  {
+    "security": "WPA",
+    "ssid": "House",
+    "password": "secret",
+    "hidden": true,
+    "payload": "WIFI:T:WPA;S:House;P:secret;H:true;;"
+  }
+]

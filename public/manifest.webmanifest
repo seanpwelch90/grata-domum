@@ -1,0 +1,11 @@
+{
+  "name": "Grata Domum",
+  "short_name": "Grata Domum",
+  "start_url": "/display",
+  "display": "standalone",
+  "background_color": "#f4efe6",
+  "theme_color": "#1e4638",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

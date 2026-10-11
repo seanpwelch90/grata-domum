@@ -1,0 +1,474 @@
+:root {
+  color-scheme: light;
+  --paper: #f3ecdf;
+  --ink: #1c2822;
+  --green: #1e4638;
+  --clay: #9a4632;
+  --card: #fffaf3;
+  --line: #e2d6c6;
+  --muted: #5e564c;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.45;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button,
+.quiet {
+  min-height: 44px;
+  border-radius: 999px;
+  border: 0;
+  padding: 0.55rem 1rem;
+  background: var(--green);
+  color: white;
+  cursor: pointer;
+}
+button.quiet,
+.quiet {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--line);
+}
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+label:has(> input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+label:has(> input[type="checkbox"]) input {
+  width: auto;
+}
+fieldset {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: grid;
+  gap: 0.4rem;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 12px;
+  padding: 0.7rem 0.8rem;
+}
+textarea {
+  min-height: 5rem;
+}
+:focus-visible {
+  outline: 3px solid var(--clay);
+  outline-offset: 2px;
+}
+a {
+  color: var(--green);
+}
+
+.door,
+.pairing {
+  min-height: 100dvh;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 0.8rem;
+  padding: 8vh 8vw;
+  max-width: 40rem;
+}
+.door h1,
+.pairing h1,
+.greeting h1,
+.display h1 {
+  font-family: "Iowan Old Style", Palatino, Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0;
+}
+.eyebrow,
+.wordmark {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--green);
+}
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.choices a,
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+}
+.choices a.quiet {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--line);
+}
+
+.admin-shell {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100dvh;
+}
+.admin-shell aside {
+  padding: 1.4rem 1rem;
+  background: #17382d;
+  color: #f6f1e7;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.admin-shell .wordmark {
+  color: #f6f1e7;
+}
+.admin-shell nav {
+  display: grid;
+  gap: 0.25rem;
+}
+.admin-shell aside button {
+  background: transparent;
+  color: #f6f1e7;
+  text-align: left;
+  border-radius: 10px;
+}
+.admin-shell aside button[aria-current="page"] {
+  background: #f3ecdf;
+  color: #17382d;
+}
+.admin-shell main {
+  padding: 1.6rem clamp(1rem, 3vw, 2.4rem) 3rem;
+}
+.admin-shell h1 {
+  font-family: "Iowan Old Style", Palatino, Georgia, serif;
+  font-weight: 500;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+.stack {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+.stack-form,
+form {
+  display: grid;
+  gap: 0.8rem;
+  max-width: 38rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1rem;
+}
+.banner {
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  background: #efe4cc;
+}
+.banner.alert {
+  background: #f3d7cf;
+}
+.pairing-code {
+  font-size: 2.4rem;
+  letter-spacing: 0.28em;
+  font-family: ui-monospace, monospace;
+}
+.pair-card img,
+.qr {
+  width: min(240px, 70vw);
+  height: auto;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+}
+.avatar-img,
+.avatar-fallback {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: grid;
+  place-items: center;
+  background: var(--green);
+  color: white;
+}
+.map-click {
+  padding: 0;
+  border-radius: 16px;
+  background: transparent;
+  width: min(100%, 720px);
+}
+.map-click img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.display {
+  min-height: 100dvh;
+  background: var(--gd-bg, #f4efe6);
+  color: var(--gd-text, #241c16);
+  position: relative;
+}
+.display main {
+  padding: 1.2rem clamp(1rem, 3vw, 2.5rem) 2.5rem;
+}
+.tabs {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.7rem;
+  background: color-mix(in srgb, var(--gd-bg, #f4efe6) 92%, transparent);
+  backdrop-filter: blur(8px);
+}
+.tabs button {
+  background: transparent;
+  color: var(--gd-text, #241c16);
+  border: 1px solid transparent;
+}
+.tabs button[aria-pressed="true"] {
+  background: var(--gd-accent, #8e3d2f);
+  color: var(--gd-accent-text, white);
+}
+.home-grid,
+.tv-home {
+  display: grid;
+  gap: 1.2rem;
+}
+@media (min-width: 900px) {
+  .home-grid,
+  .tv-home {
+    grid-template-columns: 1.3fr 0.9fr;
+    align-items: start;
+  }
+}
+.greeting h1 {
+  font-size: clamp(2.6rem, 6vw, 5rem);
+}
+.hello,
+.date,
+.visit-range,
+.fine,
+.synced {
+  color: var(--gd-muted, #5e5348);
+}
+.hello {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+}
+.visit-message {
+  font-size: 1.25rem;
+  max-width: 36rem;
+}
+.avatars {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0.6rem 0;
+}
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: var(--gd-surface, white);
+  color: var(--gd-ink, #241c16);
+  border: 2px solid var(--gd-accent, #8e3d2f);
+  font-family: Georgia, serif;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.display .card {
+  background: var(--gd-surface, white);
+  color: var(--gd-ink, #241c16);
+  border-color: transparent;
+}
+.display .card h2,
+.display .card p {
+  color: inherit;
+}
+.temp {
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  margin: 0;
+}
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+.forecast div {
+  display: grid;
+}
+.ssid {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+.address {
+  color: var(--gd-muted, #5e5348);
+}
+.events,
+.results,
+.notes,
+.pin-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+.map-layout {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 900px) {
+  .map-layout {
+    grid-template-columns: 1.4fr 0.6fr;
+  }
+}
+.map-frame {
+  overflow: auto;
+  border-radius: 18px;
+  background: var(--gd-surface, white);
+}
+.map-stage {
+  position: relative;
+  transform-origin: top left;
+  width: max-content;
+  min-width: 100%;
+}
+.map-stage img {
+  width: min(100%, 900px);
+  display: block;
+}
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: var(--gd-accent, #8e3d2f);
+  color: var(--gd-accent-text, white);
+  border-radius: 999px;
+  max-width: 9rem;
+}
+.need {
+  display: grid;
+  gap: 1.5rem;
+}
+.empty {
+  font-size: 1.15rem;
+}
+.synced {
+  margin-top: 2rem;
+}
+.loading-screen,
+.pairing {
+  background: #f4efe6;
+  color: #241c16;
+}
+.code-input {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.tv .greeting h1 {
+  font-size: clamp(4rem, 8vw, 7.5rem);
+}
+.tv .date,
+.tv .hello {
+  font-size: 1.4rem;
+}
+.tv .visit-message,
+.tv .tv-note {
+  font-size: 2rem;
+}
+.tv .qr {
+  width: min(420px, 36vw);
+}
+.tv .temp {
+  font-size: 5rem;
+}
+.tv main {
+  padding: 4vh 4vw;
+}
+.snow {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+.snow span {
+  position: absolute;
+  top: -8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .snow {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .admin-shell {
+    grid-template-columns: 1fr;
+  }
+  .admin-shell aside {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  .admin-shell nav {
+    grid-auto-flow: column;
+    overflow: auto;
+  }
+}
